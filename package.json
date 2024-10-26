@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "clone_rep": "ssh u1731342@31.31.198.62 \"git clone https://github.com/asmi046/mt_ng www/ng.mirturizma46.ru\"",
+        "clone_rep": "ssh u1731342@31.31.198.62 \"git clone https://github.com/asmi046/mt_new_year www/ng.mirturizma46.ru\"",
         "composer_remove": "ssh u1731342@31.31.198.62 \"cd www/ng.mirturizma46.ru && /opt/php/8.1/bin/php composer.phar dumpauto\"",
         "composer_install": "ssh u1731342@31.31.198.62 \"cd www/ng.mirturizma46.ru && /opt/php/8.1/bin/php composer.phar install\"",
         "composer_update": "ssh u1731342@31.31.198.62 \"cd www/ng.mirturizma46.ru && /opt/php/8.1/bin/php composer.phar update\"",
