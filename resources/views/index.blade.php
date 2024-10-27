@@ -1,13 +1,5 @@
 @extends('layouts.all')
 
-@php
-    $title = "Кремлёвская Ёлка автобусный тур из Курска - МирТуризма 46";
-    $description = "Кремлёвская Ёлка автобусный тур из Курска - МирТуризма 46";
-@endphp
-
-@section('title', $title)
-@section('description', $description)
-
 @section('main')
     <section class="banner_video">
         <video autoplay muted loop class="_video">
@@ -20,31 +12,40 @@
 
             <div class="container left_text">
                 <div class="bnr_text">
-                    <h1>Новогодний тур на <br>«Кремлёвскую Ёлку» <br> в Москву</h1>
-                    <p class="subtext">Приглашаем Вас в Новогодний тур в Москву! Вы посетите незабываемое мероприятие «Кремлёвскую Ёлку🎄» – самое главное Новогоднее представление в России и заветная мечта для миллионов мальчишек и девчонок!</p>
+                    <h1>{!! seo_data()->seo_data->page_title !!}</h1>
+                    <p class="subtext">{!! seo_data()->seo_data->page_sub_title !!}</p>
                     <br>
                     <br>
-                    <a class="button" href="#showModal">Узнать подробности</a>
+                    <a class="button" href="#showModal">Выбрать тур</a>
                 </div>
-                <div class="dop_img">
-                    <div class="img_wrap img_1">
-                        <img src="{{ asset('img/bn_present/4.jpg') }}" alt="">
-                    </div>
-                    <div class="img_wrap img_2">
-                        <img src="{{ asset('img/bn_present/2.jpg') }}" alt="">
-                    </div>
-                    <div class="img_wrap img_3">
-                        <img src="{{ asset('img/bn_present/3.jpg') }}" alt="">
-                    </div>
-                    <div class="img_wrap img_4">
-                        <img src="{{ asset('img/bn_present/1.jpg') }}" alt="">
+                <div class="dop_param">
+                    <div class="param_blk yandex">
+                        <div class="ya_logo"></div>
+                        <div class="text_blk">
+                            <div class="stars_wrapper">
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                                <div class="star"></div>
+                            </div>
+                            <p>Один из лучших туроператоров <br>области</p>
+                        </div>
+
                     </div>
 
-                    <div class="img_wrap img_5">
-                        <img src="{{ asset('img/bn_present/5.webp') }}" alt="">
+                    <div class="param_blk cr_1">
+                        <div class="cerecter">
+                            20
+                        </div>
+                        <p>Лент на рынке туристических услуг Курской области</p>
                     </div>
-                    <div class="img_wrap img_6">
-                        <img src="{{ asset('img/bn_present/6.jpg') }}" alt="">
+
+                    <div class="param_blk cr_2">
+                        <div class="cerecter">
+                            13
+                        </div>
+                        <p>Уникальных предложений на новогодние путешествия для всей семьи</p>
                     </div>
                 </div>
             </div>
