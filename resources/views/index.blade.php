@@ -51,6 +51,15 @@
             </div>
     </section>
 
+    <section class="turs_in_main_section">
+        <div class="container">
+
+            <x-tours-in-main></x-tours-in-main>
+        </div>
+    </section>
+
+
+
     {{-- <section id="about" class="about_section">
         <div class="container">
             <div class="about">

@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('img', 500)->nullable()->comment('Изображение');
             $table->integer('deycount')->default(1)->comment('Количество дней');
             $table->date('start_data')->default(DB::raw('CURRENT_TIMESTAMP'))->comment('Дата поездки');
-            $table->mediumText('top_description')->nullable()->comment('Верхнее описание');
+            $table->mediumText('top_description')->comment('Верхнее описание');
             $table->mediumText('program')->nullable()->comment('Программа тура');
-            $table->mediumText('in_price')->nullable()->comment('Входит в стоимость');
-            $table->mediumText('out_price')->nullable()->comment('За отдельную плату');
+            $table->mediumText('in_price')->comment('Входит в стоимость');
+            $table->mediumText('out_price')->comment('За отдельную плату');
             $table->json('galery');
             $table->json('prices');
         });

@@ -1,0 +1,44 @@
+.all_tour_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:20px;
+    overflow: hidden;
+
+
+    .tour_card {
+        overflow: hidden;
+        width: 30%;
+        border-radius: 20px;
+        background-color: $blue_light_color;
+        display: flex;
+        flex-direction: column;
+        .img {
+            position: relative;
+            height: 240px;
+            .price_label {
+                position: absolute;
+                right: 10px;
+                top:10px;
+            }
+        }
+
+        .text {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex:1;
+            h3 {
+                margin-top: 0;
+            }
+            button {
+                margin-top: auto;
+            }
+        }
+
+        .label_white {
+            margin-right: auto;
+            margin-bottom: 10px;
+        }
+    }
+}

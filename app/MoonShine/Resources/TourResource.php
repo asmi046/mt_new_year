@@ -62,15 +62,15 @@ class TourResource extends ModelResource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Название', 'title'),
+            Text::make('Название', 'title')->required(),
             Text::make('URL', 'slug'),
-            Number::make('Количество дней', 'deycount'),
+            Number::make('Количество дней', 'deycount')->required(),
             Image::make('Изображение', 'img')->dir('tours'),
-            Date::make('Начало тура', 'start_data')->format('d.m.Y'),
-            TinyMce::make('Верхнее описание', 'top_description'),
+            Date::make('Начало тура', 'start_data')->format('d.m.Y')->required(),
+            TinyMce::make('Верхнее описание', 'top_description')->required(),
             TinyMce::make('Программа тура', 'program'),
-            TinyMce::make('Входит в стоимость', 'in_price'),
-            TinyMce::make('За отдельную плату', 'out_price'),
+            TinyMce::make('Входит в стоимость', 'in_price')->required(),
+            TinyMce::make('За отдельную плату', 'out_price')->required(),
 
             Json::make('Варианты цены', 'prices')
                     ->fields([
@@ -96,6 +96,30 @@ class TourResource extends ModelResource
     {
         return [
             ID::make()->sortable(),
+            Text::make('Название', 'title'),
+            Text::make('URL', 'slug'),
+            Number::make('Количество дней', 'deycount'),
+            Image::make('Изображение', 'img')->dir('tours'),
+            Date::make('Начало тура', 'start_data')->format('d.m.Y'),
+            TinyMce::make('Верхнее описание', 'top_description'),
+            TinyMce::make('Программа тура', 'program'),
+            TinyMce::make('Входит в стоимость', 'in_price'),
+            TinyMce::make('За отдельную плату', 'out_price'),
+
+            Json::make('Варианты цены', 'prices')
+                    ->fields([
+                        Position::make(),
+                        Text::make('Цена', 'price'),
+                        Text::make('Комментарий', 'comment')
+                    ]),
+
+            Json::make('Галерея', 'galery')
+                    ->fields([
+                        Position::make(),
+                        Image::make('Изображение', 'img')->dir('tours'),
+                        Text::make('Заголовок', 'title'),
+                        Switcher::make('Publish', 'in_top')
+                    ])
         ];
     }
 

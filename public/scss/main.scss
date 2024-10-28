@@ -122,6 +122,18 @@ h1 {
     }
 }
 
+.label {
+    line-height: 1;
+    background-color: $main_color;
+    padding: 5px 20px;
+    color: $black_color;
+    font-size: 14px;
+    border-radius: 20px;
+    &_white {
+        background-color: white;
+    }
+}
+
 @media (max-width:1280px) {
     .container{
         width:96%;
@@ -173,3 +185,4 @@ h1 {
 @import "program";
 @import "contacts";
 @import "footer";
+@import "ng_tour";
