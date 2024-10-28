@@ -20,13 +20,11 @@ class Tour extends Model
         'in_price',
         'out_price',
         'galery',
-        'top_galery',
         'prices'
     ];
 
     public $casts = [
         'galery' => 'array',
-        'top_galery' => 'array',
         'prices' => 'array',
     ];
 }

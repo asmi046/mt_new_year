@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title')->comment('Название тура');
-            $table->string('slug')->comment('Слаг');
+            $table->string('slug')->unique()->comment('Слаг');
             $table->string('img', 500)->nullable()->comment('Изображение');
             $table->integer('deycount')->default(1)->comment('Количество дней');
             $table->date('start_data')->default(DB::raw('CURRENT_TIMESTAMP'))->comment('Дата поездки');
@@ -24,7 +24,6 @@ return new class extends Migration
             $table->mediumText('in_price')->nullable()->comment('Входит в стоимость');
             $table->mediumText('out_price')->nullable()->comment('За отдельную плату');
             $table->json('galery');
-            $table->json('top_galery');
             $table->json('prices');
         });
     }
