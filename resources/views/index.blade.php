@@ -19,7 +19,7 @@
                     <a class="button" href="#showModal">Выбрать тур</a>
                 </div>
                 <div class="dop_param">
-                    <div class="param_blk yandex">
+                    <div class="param_blk param_blk_1 yandex">
                         <div class="ya_logo"></div>
                         <div class="text_blk">
                             <div class="stars_wrapper">
@@ -34,14 +34,14 @@
 
                     </div>
 
-                    <div class="param_blk cr_1">
+                    <div class="param_blk param_blk_2 cr_1">
                         <div class="cerecter">
                             20
                         </div>
                         <p>Лент на рынке туристических услуг Курской области</p>
                     </div>
 
-                    <div class="param_blk cr_2">
+                    <div class="param_blk param_blk_3 cr_2">
                         <div class="cerecter">
                             13
                         </div>
@@ -51,23 +51,7 @@
             </div>
     </section>
 
-    {{-- <x-header></x-header>
-
-    <section class="banner">
-        <div class="bnr_img">
-            <div class="line"></div>
-        </div>
-        <div class="container">
-            <div class="bnr_text">
-                <h1>Новогодний тур на <br>«Кремлёвскую Ёлку» <br> в Москву</h1>
-                <p class="subtext">Приглашаем Вас в Новогодний тур в Москву! Вы посетите незабываемое мероприятие «Кремлёвскую Ёлку🎄» – самое главное Новогоднее представление в России и заветная мечта для миллионов мальчишек и девчонок!</p>
-                <x-cerecter></x-cerecter>
-                <a class="button" href="#showModal">Узнать подробности</a>
-            </div>
-        </div>
-    </section> --}}
-
-    <section id="about" class="about_section">
+    {{-- <section id="about" class="about_section">
         <div class="container">
             <div class="about">
                 <div class="photo">
@@ -108,8 +92,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
+    {{--
     <section id="location" class="location_section">
         <div class="container">
             <h2>Лучшие моменты <br>представления</h2>
@@ -120,7 +105,6 @@
     <section id="program" class="program_section central_section">
         <div class="container">
             <h2>Ознакомьтесь с<br>программой тура «Кремлёвская Ёлка»</h2>
-            {{-- <a target="_blanck" class="download_btn" href="{{ asset('program/spb_2025.pdf')}}"><span>Скачать программу для <br>ознакомления в формате PDF</span></a> --}}
             <x-program></x-program>
         </div>
     </section>
@@ -144,17 +128,10 @@
             <div class="wrapper">
                 <h2>Стоимость тура:</h2>
 
-                {{-- <strong>На комфортабельном автобусе:</strong> --}}
                 <ul>
                     <li>9000 ₽ дети </li>
                     <li>8500 ₽ взрослые</li>
                 </ul>
-
-                {{-- <strong>На поезде:</strong>
-                <ul>
-                    <li>10500 ₽ дети</li>
-                    <li>11500 ₽ взрослые</li>
-                </ul> --}}
 
                 <h2>В цену тура входит:</h2>
                 <ul>
@@ -167,23 +144,9 @@
             </div>
 
         </div>
-    </section>
+    </section> --}}
 
-    <section id="contacts" section="contacts_section">
-        <div class="container">
-            <div class="contacts_blk">
-                <x-map.map-in-page></x-map.map-in-page>
-                <div class="text">
-                    <h2>Свяжитесь с нами любым удобным способом:</h2>
-                    <a class="phone" href="tel:+7{{ phone_format(config('contacts.phone')) }}">{{ config('contacts.phone') }}</a>
-                    <a class="email" href="mailto:{{ phone_format(config('contacts.email')) }}">{{ config('contacts.email') }}</a>
-                    <p>{{ config('contacts.adress') }}</p>
-
-                    <x-social-net></x-social-net>
-                </div>
-            </div>
-        </div>
-    </section>
+    <x-contacts-section></x-contacts-section>
 
 @endsection
 

@@ -37,7 +37,7 @@ let img_object_from =  {
 }
 let img_object_to = {
     opacity:1,
-    duration:.3
+    duration:.2
 }
 
 let tl = gsap.timeline({delay:1})
@@ -64,13 +64,9 @@ tl.fromTo('header .container',
         duration:.5
     }
 )
-.fromTo('.img_1', img_object_from, img_object_to )
-.fromTo('.img_2', img_object_from, img_object_to )
-.fromTo('.img_3', img_object_from, img_object_to )
-.fromTo('.img_4', img_object_from, img_object_to )
-.fromTo('.img_5', img_object_from, img_object_to )
-.fromTo('.img_6', img_object_from, img_object_to )
-
+.fromTo('.param_blk_1', img_object_from, img_object_to )
+.fromTo('.param_blk_2', img_object_from, img_object_to )
+.fromTo('.param_blk_3', img_object_from, img_object_to )
 .to('.about',
     {
         opacity:1,

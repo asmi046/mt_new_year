@@ -1,7 +1,7 @@
 .contacts_blk {
-    background-color: $gray_bg_color_y;
+    background-color: $blue_light_color;
     border-radius: 20px;
-    border:1px solid $gray_border_color;
+    border:1px solid $blue_light_color;
     display: flex;
     width:70%;
     margin: 0 auto;
@@ -37,7 +37,7 @@
     gap:10px;
     margin-top: 20px;
     .social_lnk {
-        background-color: $hover_color;
+        background-color: $blue_light_color;
         display: block;
         width:50px;
         height: 50px;

@@ -12,6 +12,12 @@
 body{
     font-family: $main_fonts;
     font-size: 16px;
+    background-color: $blue_color;
+    color:white;
+
+    a{
+        color:white;
+    }
 }
 
 img {
