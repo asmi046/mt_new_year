@@ -16,7 +16,7 @@
                     <p class="subtext">{!! seo_data()->seo_data->page_sub_title !!}</p>
                     <br>
                     <br>
-                    <a class="button" href="#showModal">Выбрать тур</a>
+                    <a class="button" href="#tours_cat">Выбрать тур</a>
                 </div>
                 <div class="dop_param">
                     <div class="param_blk param_blk_1 yandex">
@@ -51,8 +51,18 @@
             </div>
     </section>
 
-    <section class="turs_in_main_section">
+    <section id="tours_cat" class="turs_in_main_section">
         <div class="container">
+            <div class="about_tours">
+                <div class="text">
+                    <h2>Новогодние туры <br>из Курска <strong class="gold">2025</strong></h2>
+                    <p class="subtitle">Начните новый год с урагана эмоций и впечатлений вместе с новогодними турами от МирТуризма46. У нас Вы найдете тур на любой вкус и кошелек.</p>
+                    <a class="button" href="#showModal">Получить консультацию</a>
+                </div>
+                <div class="el">
+                    <img src="{{ asset('img/main_el.svg') }}" alt="Каталог новогодних туров из Курска 2025">
+                </div>
+            </div>
 
             <x-tours-in-main></x-tours-in-main>
         </div>

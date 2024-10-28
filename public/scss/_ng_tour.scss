@@ -1,7 +1,29 @@
+.about_tours {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 40px 0;
+    h2 {
+        font-size: 52px;
+        margin-top: 0;
+    }
+    .text {
+        width:50%;
+        .subtitle {
+            margin-bottom: 40px;
+        }
+    }
+
+    .el {
+        height: 300px;
+    }
+}
+
 .all_tour_wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    font-family: 'Play';
     gap:20px;
     overflow: hidden;
 
