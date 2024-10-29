@@ -43,8 +43,20 @@ footer {
 
 
 
+@media (max-width:768px) {
+    footer {
+        background-position: -100px center, calc(100% + 130px) center;
+    }
+}
+
 @media (max-width:480px) {
-    footer nav ul {
-        flex-direction: column;
+    footer  {
+        background-image: url(../img/center_els.svg);
+        background-position: center bottom;
+        background-size: contain;
+        padding-bottom: 290px;
+        nav ul {
+            flex-direction: column;
+        }
     }
 }

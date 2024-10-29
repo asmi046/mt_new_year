@@ -3,6 +3,7 @@ import './bootstrap';
 
 import {createApp} from 'vue/dist/vue.esm-bundler';
 import ModalWindow from "./components/ModalWindow.vue"
+import TourPrice from "./components/TourPrice.vue"
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import { VMaskDirective } from 'v-slim-mask'
@@ -14,9 +15,22 @@ const global_app = createApp({
     setup() {}
 })
 
+
 global_app.use(VueAxios, axios)
 global_app.directive('mask', VMaskDirective)
 global_app.mount("#global_app");
+
+
+const price_app = createApp({
+    components:{
+        TourPrice,
+    },
+    setup() {}
+})
+
+price_app.use(VueAxios, axios)
+price_app.directive('mask', VMaskDirective)
+price_app.mount("#price_app");
 
 
 import SideMenu from './menues.js';
@@ -64,6 +78,7 @@ tl.fromTo('header .container',
         duration:.5
     }
 )
+.fromTo('.page_top_galery', img_object_from, img_object_to )
 .fromTo('.param_blk_1', img_object_from, img_object_to )
 .fromTo('.param_blk_2', img_object_from, img_object_to )
 .fromTo('.param_blk_3', img_object_from, img_object_to )

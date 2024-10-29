@@ -19,7 +19,7 @@
                 <a class="button" href="#tours_cat">Подробнее о туре</a>
             </div>
 
-            <div class="dop_param">
+            <div class="dop_param page_top_galery">
                 @foreach ($tour_info->galery as $photo)
                     @if ($photo['in_top'])
                         <x-palaroid :item="$photo"></x-palaroid>
@@ -31,6 +31,46 @@
 
     <section id="tours_content" class="tours_content">
         <div class="container">
+            <div class="tour_info">
+                <div id="price_app" class="top_info text_styles">
+                    <div class="text">
+                        {!! $tour_info->top_description !!}
+                    </div>
+                    <tour-price :prices="{{json_encode($tour_info->prices)}}"></tour-price>
+                </div>
+
+                <div class="galery">
+                    <h2 class="big">Яркие моменты тура</h2>
+                    <div class="cards">
+                        @foreach ($tour_info->galery as $photo)
+                            <x-palaroid :item="$photo"></x-palaroid>
+                        @endforeach
+                    </div>
+                </div>
+
+                <div class="program">
+                    <h2 class="big">Программа тура</h2>
+                    <div class="text_styles">
+                        {!! $tour_info->program !!}
+                    </div>
+                </div>
+                <div class="girland"></div>
+
+                <div class="in_price">
+                    <h2 class="big">В цену входит</h2>
+                    <div class="text_styles">
+                        {!! $tour_info->in_price !!}
+                    </div>
+                </div>
+
+                <div class="program">
+                    <h2 class="big">За отдельную плату</h2>
+                    <div class="text_styles">
+                        {!! $tour_info->in_price !!}
+                    </div>
+                </div>
+            </div>
+
 
         </div>
     </section>
