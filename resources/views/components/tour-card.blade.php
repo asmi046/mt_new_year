@@ -1,10 +1,10 @@
-<a href="#" class="tour_card">
+<a href="{{ route('tour_page', $item['slug']) }}" class="tour_card">
     <div class="img">
         <img src="{{ Storage::url($item['img']) }}" alt="{{ $item['title'] }}">
 
         @if ($item['prices'])
             <div class="label price_label">
-                {{ $item['prices'][0]['price'] }} ₽
+                от {{ $item['prices'][0]['price'] }} ₽
             </div>
         @endif
     </div>

@@ -110,8 +110,8 @@ h1 {
     }
 }
 
-.orange{
-    color: $main_color;
+.gold{
+    color: $gold_color;
 }
 
 
@@ -129,6 +129,7 @@ h1 {
     color: $black_color;
     font-size: 14px;
     border-radius: 20px;
+    font-family: "Play";
     &_white {
         background-color: white;
     }
@@ -186,3 +187,6 @@ h1 {
 @import "contacts";
 @import "footer";
 @import "ng_tour";
+@import "tour_page";
+@import "palaroid";
+
