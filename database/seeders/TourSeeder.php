@@ -71,6 +71,7 @@ class TourSeeder extends Seeder
                 'title' => 'Горнолыжный тур в Красную поляну',
                 'deys' => 5,
                 'img' => "Горнолыжный-тур-в-Красную-поляну-Роха_111.jpg",
+
                 'start_data'=> "17.02.2025",
                 'prices' => [
                     ['price' => 25000, 'comment' => ''],
