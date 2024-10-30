@@ -70,7 +70,7 @@ class TourSeeder extends Seeder
                 'dir' => 'krasnaya_polyana',
                 'title' => 'Горнолыжный тур в Красную поляну',
                 'deys' => 5,
-                'img' => "Горнолыжный-тур-в-Красную-поляну-Роха-хутор-Горки-город-Газпром-от-Мир-Туризма-Курск.jpg",
+                'img' => "Горнолыжный-тур-в-Красную-поляну-Роха_111.jpg",
                 'start_data'=> "17.02.2025",
                 'prices' => [
                     ['price' => 25000, 'comment' => ''],
@@ -86,7 +86,7 @@ class TourSeeder extends Seeder
                     ['img' => "SDsGT1TEKQF4V51E-qm2MIlRM_Kg09OjpJzNnANhPECAGIAj3cbyCQvY9o_QMsj-gwDKiDpaycklvC-V6TmODdC9-min.jpg", 'title' => "Описание 1", 'in_top' => false],
                     ['img' => "Wei7oj_r0KQ66Zj2U3vdtAKQ6YWl37T4tlqcK6ct-VgoGIUN9iqT8VeoYXGfwwEX8x0buHGtIxpqR3Giupu6FcsQ-min.jpg", 'title' => "Описание 1", 'in_top' => false],
                     ['img' => "zoabRduzIwC8leO9How2x1aJMY6q56RI8isJA-Y3vzfDZ6xkJxHQe3ba56RzduTTKBGCHp7qq0HMyD8uUyQn3QuZ-min.jpg", 'title' => "Описание 1", 'in_top' => false],
-                    ['img' => "Горнолыжный-тур-в-Красную-поляну-Роха-хутор-Горки-город-Газпром-от-Мир-Туризма-Курск.jpg", 'title' => "Описание 1", 'in_top' => false],
+                    ['img' => "Горнолыжный-тур-в-Красную-поляну-Роха_111.jpg", 'title' => "Описание 1", 'in_top' => false],
                     ['img' => "изображение_viber_2021-10-25_20-49-58-097-min.jpg", 'title' => "Описание 1", 'in_top' => false],
                     ['img' => "изображение_viber_2021-10-25_20-51-06-540-min-e1635186608301.jpg", 'title' => "Описание 1", 'in_top' => false],
                     ['img' => "изображение_viber_2021-10-25_20-51-06-598-min.jpg", 'title' => "Описание 1", 'in_top' => false],
