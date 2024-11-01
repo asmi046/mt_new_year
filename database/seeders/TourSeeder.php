@@ -341,6 +341,7 @@ class TourSeeder extends Seeder
 
             $inserted_item = [
                 'title' => $item['title'],
+                'title_input' => $item['title'],
                 'slug' => Str::slug($item['title']),
                 'img' => $main_img,
                 'deycount' => $item['deys'],

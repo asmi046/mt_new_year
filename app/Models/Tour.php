@@ -11,6 +11,7 @@ class Tour extends Model
 
     public $fillable = [
         'title',
+        'title_input',
         'slug',
         'img',
         'deycount',

@@ -12,7 +12,7 @@
 
         <div class="container left_text tour_page_title">
             <div class="bnr_text">
-                <h1>{!! $tour_info->title !!}</h1>
+                <h1>{!! $tour_info->title_input?htmlspecialchars_decode($tour_info->title_input):$tour_info->title !!}</h1>
                 <p class="label label_gold">от {{ $tour_info->prices[0]['price'] }} ₽</p>
                 <p class="label label_white">{{ $tour_info->deycount }} дней</p>
                 <p class="label label_white">{{ date ("d.m.Y", strtotime($tour_info->start_data)) }}</p>

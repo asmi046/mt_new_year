@@ -63,6 +63,7 @@ class TourResource extends ModelResource
         return [
             ID::make()->sortable(),
             Text::make('Название', 'title')->required(),
+            TinyMce::make('Название на баннере', 'title_input'),
             Text::make('URL', 'slug'),
             Number::make('Количество дней', 'deycount')->required(),
             Image::make('Изображение', 'img')->dir('tours'),
@@ -97,6 +98,7 @@ class TourResource extends ModelResource
         return [
             ID::make()->sortable(),
             Text::make('Название', 'title'),
+            TinyMce::make('Название на баннере', 'title_input'),
             Text::make('URL', 'slug'),
             Number::make('Количество дней', 'deycount'),
             Image::make('Изображение', 'img')->dir('tours'),
