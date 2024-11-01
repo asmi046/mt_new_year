@@ -29,4 +29,12 @@ class Tour extends Model
         'galery' => 'array',
         'prices' => 'array',
     ];
+
+    public function setSlugAttribute($value)
+    {
+        if (empty($value))
+            $this->attributes['slug'] =  Str::slug($this->title);
+        else
+            $this->attributes['slug'] =  $value;
+    }
 }
