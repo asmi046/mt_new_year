@@ -15,7 +15,7 @@ class ToursInMain extends Component
      */
     public function __construct()
     {
-        $this->all_tours = Tour::all();
+        $this->all_tours = Tour::orderBy("order")->get();
     }
 
     /**

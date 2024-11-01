@@ -111,6 +111,7 @@ export default {
         border-radius: 11px;
         position:relative;
         padding: 40px;
+        color:black;
 
     }
 
@@ -159,6 +160,7 @@ export default {
         font-size: 48px;
         font-weight: bold;
         margin-bottom: 20px;
+        margin-top: 10px;
     }
 
     .policy_descr {

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('tours', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->integer('order')->comment('Порядок вывода');
             $table->string('title')->comment('Название тура');
             $table->string('title_input')->nullable()->comment('Название тура выводимое на страницу');
             $table->string('slug')->unique()->comment('Слаг');

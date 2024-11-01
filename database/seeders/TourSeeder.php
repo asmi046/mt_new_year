@@ -340,6 +340,7 @@ class TourSeeder extends Seeder
             }
 
             $inserted_item = [
+                'order' => 100,
                 'title' => $item['title'],
                 'title_input' => $item['title'],
                 'slug' => Str::slug($item['title']),

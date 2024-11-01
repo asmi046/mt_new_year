@@ -10,6 +10,7 @@ class Tour extends Model
     use HasFactory;
 
     public $fillable = [
+        'order',
         'title',
         'title_input',
         'slug',
