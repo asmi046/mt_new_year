@@ -16,7 +16,7 @@
                     <p class="subtext">{!! seo_data()->seo_data->page_sub_title !!}</p>
                     <br>
                     <br>
-                    <a class="button" href="#tours_cat">Выбрать тур</a>
+                    <a class="button yakor" href="#tours_cat">Выбрать тур</a>
                 </div>
                 <div class="dop_param">
                     <div class="param_blk param_blk_1 yandex">
