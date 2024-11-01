@@ -37,7 +37,7 @@
                         {!! $tour_info->top_description !!}
                     </div>
                     <div class="pay_wrapper">
-                        <tour-price :prices="{{json_encode($tour_info->prices)}}"></tour-price>
+                        <tour-price title="{{$tour_info->title}}" img="{{config('app.url').Storage::url($tour_info->img)}}"  :prices="{{json_encode($tour_info->prices)}}"></tour-price>
                     </div>
                 </div>
 

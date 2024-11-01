@@ -10,7 +10,7 @@
                 </div>
             </div>
         </div>
-        <button class="button">Купить путевку</button>
+        <button @click.prevent="goToPay" class="button">Купить путевку</button>
     </div>
 </template>
 
@@ -18,13 +18,28 @@
 import { ref } from 'vue';
 
     const props = defineProps({
-        prices: Array
+        prices: Array,
+        title:String,
+        img:String,
     })
 
     let selected = ref(0);
 
     const selectPrice = (index) => {
         selected.value = index
+    }
+
+    const goToPay = () => {
+        const payPage = "https://www.mirturizma46.ru/otpravka-dannyx-na-oplatu/"
+        const tourType = "?type=ekskursionka"
+        const pid = "&pid=10784"
+        const price = "&price="
+        const message = "&message="
+        const picture = "&pic="
+
+        let resultPayURL = payPage+tourType+pid+price+props.prices[selected.value].price+message+props.title+picture+props.img
+
+        document.location.href = resultPayURL
     }
 
 </script>
