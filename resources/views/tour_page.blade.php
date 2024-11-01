@@ -16,7 +16,7 @@
                 <p class="label label_gold">от {{ $tour_info->prices[0]['price'] }} ₽</p>
                 <p class="label label_white">{{ $tour_info->deycount }} дней</p>
                 <p class="label label_white">{{ date ("d.m.Y", strtotime($tour_info->start_data)) }}</p>
-                <a class="button" href="#tours_cat">Подробнее о туре</a>
+                <a class="button" href="#tours_content">Подробнее о туре</a>
             </div>
 
             <div class="dop_param page_top_galery">
@@ -36,7 +36,9 @@
                     <div class="text">
                         {!! $tour_info->top_description !!}
                     </div>
-                    <tour-price :prices="{{json_encode($tour_info->prices)}}"></tour-price>
+                    <div class="pay_wrapper">
+                        <tour-price :prices="{{json_encode($tour_info->prices)}}"></tour-price>
+                    </div>
                 </div>
 
                 <div class="galery">

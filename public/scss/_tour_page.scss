@@ -15,10 +15,15 @@
             }
         }
 
-        .tour_price {
+        .pay_wrapper {
             max-width:500px;
             width:100%;
+
+        }
+
+        .tour_price {
             background-color: white;
+            min-height: 179px;
             color:$black_color;
             padding: 20px;
             border-radius: 20px;
@@ -27,6 +32,8 @@
             background-repeat: no-repeat;
             background-size: 50% 80%;
             background-position:  calc(100% + 90px) bottom;
+            display: flex;
+            flex-direction: column;
 
             .selectors {
                 width:80%;
@@ -81,6 +88,10 @@
                     background-color: $gold_color;
                 }
             }
+
+            .button{
+                margin: auto auto 0 0;
+            }
         }
     }
 
@@ -118,6 +129,7 @@
             margin-top: 20px;
             width: unset;
             max-width: unset;
+            min-height: 140px;
         }
 
     }
