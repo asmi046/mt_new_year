@@ -87,7 +87,7 @@ class TourResource extends ModelResource
                         Position::make(),
                         Image::make('Изображение', 'img')->dir('tours'),
                         Text::make('Заголовок', 'title'),
-                        Switcher::make('Publish', 'in_top')
+                        Switcher::make('В шапке', 'in_top')
                     ])
         ];
     }
@@ -123,7 +123,7 @@ class TourResource extends ModelResource
                         Position::make(),
                         Image::make('Изображение', 'img')->dir('tours'),
                         Text::make('Заголовок', 'title'),
-                        Switcher::make('Publish', 'in_top')
+                        Switcher::make('В шапке', 'in_top')
                     ])
         ];
     }
