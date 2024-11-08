@@ -101,6 +101,10 @@ export default {
         background-color: #000000aa;
     }
 
+    a {
+        color:black;
+    }
+
     .popup {
         width:50%;
         max-width: 600px;
