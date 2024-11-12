@@ -1,7 +1,7 @@
 <div class="palaroid">
-    <div class="photo_wrap">
+    <a data-fslightbox="page-galery" href="{{ Storage::url($item['img']) }}" class="photo_wrap">
         <img src="{{ Storage::url($item['img']) }}" alt="{{ $item['title'] }}">
-    </div>
+    </a>
     <div class="text">
         {{ $item['title'] }}
     </div>

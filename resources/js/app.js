@@ -8,6 +8,8 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import { VMaskDirective } from 'v-slim-mask'
 
+import fslightbox from 'fslightbox'
+
 const global_app = createApp({
     components:{
         ModalWindow,
