@@ -16,6 +16,22 @@
                 <p class="label label_gold">от {{ $tour_info->prices[0]['price'] }} ₽</p>
                 <p class="label label_white">{{ $tour_info->deycount }} дней</p>
                 <p class="label label_white">{{ date ("d.m.Y", strtotime($tour_info->start_data)) }}</p>
+
+                @if ($tour_info->tour_program)
+                    <div class=toyr_program>
+
+                        @foreach ($tour_info->tour_program as $item)
+                            <div class="step">
+                                <div class="point"></div>
+                                <span>{{ $item['title'] }}</span>
+                            </div>
+                        @endforeach
+
+                        <div class="line"></div>
+                    </div>
+                @endif
+
+
                 <a class="button yakor" href="#tours_content">Подробнее о туре</a>
             </div>
 

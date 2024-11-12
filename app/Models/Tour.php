@@ -22,10 +22,12 @@ class Tour extends Model
         'in_price',
         'out_price',
         'galery',
+        'tour_program',
         'prices'
     ];
 
     public $casts = [
+        'tour_program' => 'array',
         'galery' => 'array',
         'prices' => 'array',
     ];

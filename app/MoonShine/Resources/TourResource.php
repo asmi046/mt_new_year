@@ -75,6 +75,12 @@ class TourResource extends ModelResource
             TinyMce::make('Входит в стоимость', 'in_price')->required(),
             TinyMce::make('За отдельную плату', 'out_price')->required(),
 
+            Json::make('Программа тура', 'tour_program')
+                    ->fields([
+                        Position::make(),
+                        Text::make('Заголовок', 'title'),
+                    ]),
+
             Json::make('Варианты цены', 'prices')
                     ->fields([
                         Position::make(),
@@ -110,6 +116,12 @@ class TourResource extends ModelResource
             TinyMce::make('Программа тура', 'program'),
             TinyMce::make('Входит в стоимость', 'in_price'),
             TinyMce::make('За отдельную плату', 'out_price'),
+
+            Json::make('Программа тура', 'tour_program')
+                    ->fields([
+                        Position::make(),
+                        Text::make('Заголовок', 'title'),
+                    ]),
 
             Json::make('Варианты цены', 'prices')
                     ->fields([
