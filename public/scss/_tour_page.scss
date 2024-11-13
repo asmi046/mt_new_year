@@ -135,10 +135,24 @@
     }
 }
 
-@media (max-width:768px) {
+@media (max-width:480px) {
     .tour_info {
         h2.big {
             font-size: 32px;
         }
+
+
+        .galery {
+            .cards {
+                justify-content: space-between;
+                .palaroid {
+                    width:48%;
+                    margin: 0 0 20px 0;
+                }
+            }
+
+        }
     }
+
+
 }
