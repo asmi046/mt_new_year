@@ -11,7 +11,16 @@
     <div class="text">
         <h3>{{ $item['title'] }}</h3>
         <p class="label label_white">{{ $item['deycount'] }} {{ echo_days($item['deycount']) }}</p>
+        @if ($item['multi_data'])
+        <p class="label label_white">
+            @foreach ($item['multi_data'] as $item)
+                {{ date ("d.m.Y", strtotime($item['start_data'])) }},
+            @endforeach
+        </p>
+        @else
         <p class="label label_white">{{ date ("d.m.Y", strtotime($item['start_data'])) }}</p>
+        @endif
+
         <button class="button">Подробнее</button>
     </div>
 </a>

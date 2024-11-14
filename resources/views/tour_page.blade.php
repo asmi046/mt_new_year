@@ -15,7 +15,16 @@
                 <h1>{!! $tour_info->title_input?htmlspecialchars_decode($tour_info->title_input):$tour_info->title !!}</h1>
                 <p class="label label_gold">от {{ $tour_info->prices[0]['price'] }} ₽</p>
                 <p class="label label_white">{{ $tour_info->deycount }}  {{ echo_days($tour_info->deycount) }}</p>
-                <p class="label label_white">{{ date ("d.m.Y", strtotime($tour_info->start_data)) }}</p>
+
+                @if ($tour_info['multi_data'])
+                    <p class="label label_white">
+                        @foreach ($tour_info['multi_data'] as $item)
+                            {{ date ("d.m.Y", strtotime($item['start_data'])) }},
+                        @endforeach
+                    </p>
+                @else
+                    <p class="label label_white">{{ date ("d.m.Y", strtotime($tour_info['start_data'])) }}</p>
+                @endif
 
                 @if ($tour_info->tour_program)
                     <div class=toyr_program>
