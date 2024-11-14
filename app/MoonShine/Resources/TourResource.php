@@ -71,19 +71,28 @@ class TourResource extends ModelResource
             Text::make('URL', 'slug'),
             Number::make('Количество дней', 'deycount')->required(),
             Image::make('Изображение', 'img')->dir('tours'),
-            Date::make('Начало тура', 'start_data')->format('d.m.Y')->required(),
+            Date::make('Основная дата тура', 'start_data')->format('d.m.Y')->required(),
             TinyMce::make('Верхнее описание', 'top_description')->required(),
             TinyMce::make('Программа тура', 'program'),
             TinyMce::make('Входит в стоимость', 'in_price')->required(),
             TinyMce::make('За отдельную плату', 'out_price')->required(),
 
+            Json::make('Указать несколько дат тура', 'multi_data')
+            ->removable()
+            ->fields([
+                Position::make(),
+                Date::make('Дата тура', 'start_data')->format('d.m.Y')
+            ]),
+
             Json::make('Программа тура', 'tour_program')
+            ->removable()
                     ->fields([
                         Position::make(),
                         Text::make('Заголовок', 'title'),
                     ]),
 
             Json::make('Варианты цены', 'prices')
+            ->removable()
                     ->fields([
                         Position::make(),
                         Text::make('Цена', 'price'),
@@ -91,6 +100,7 @@ class TourResource extends ModelResource
                     ]),
 
             Json::make('Галерея', 'galery')
+            ->removable()
                     ->fields([
                         Position::make(),
                         Image::make('Изображение', 'img')->dir('tours'),
@@ -114,11 +124,17 @@ class TourResource extends ModelResource
             Text::make('URL', 'slug'),
             Number::make('Количество дней', 'deycount'),
             Image::make('Изображение', 'img')->dir('tours'),
-            Date::make('Начало тура', 'start_data')->format('d.m.Y'),
+            Date::make('Основная дата тура', 'start_data')->format('d.m.Y'),
             TinyMce::make('Верхнее описание', 'top_description'),
             TinyMce::make('Программа тура', 'program'),
             TinyMce::make('Входит в стоимость', 'in_price'),
             TinyMce::make('За отдельную плату', 'out_price'),
+
+            Json::make('Указать несколько дат тура', 'multi_data')
+            ->fields([
+                Position::make(),
+                Text::make('Заголовок', 'title'),
+            ]),
 
             Json::make('Программа тура', 'tour_program')
                     ->fields([
