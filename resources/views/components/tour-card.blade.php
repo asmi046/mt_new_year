@@ -10,7 +10,7 @@
     </div>
     <div class="text">
         <h3>{{ $item['title'] }}</h3>
-        <p class="label label_white">{{ $item['deycount'] }} дней</p>
+        <p class="label label_white">{{ $item['deycount'] }} {{ echo_days($item['deycount']) }}</p>
         <p class="label label_white">{{ date ("d.m.Y", strtotime($item['start_data'])) }}</p>
         <button class="button">Подробнее</button>
     </div>
