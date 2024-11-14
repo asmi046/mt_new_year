@@ -14,7 +14,7 @@
             <div class="bnr_text">
                 <h1>{!! $tour_info->title_input?htmlspecialchars_decode($tour_info->title_input):$tour_info->title !!}</h1>
                 <p class="label label_gold">от {{ $tour_info->prices[0]['price'] }} ₽</p>
-                <p class="label label_white">{{ $tour_info->deycount }}  {{ echo_days($item->deycount) }}</p>
+                <p class="label label_white">{{ $tour_info->deycount }}  {{ echo_days($tour_info->deycount) }}</p>
                 <p class="label label_white">{{ date ("d.m.Y", strtotime($tour_info->start_data)) }}</p>
 
                 @if ($tour_info->tour_program)
