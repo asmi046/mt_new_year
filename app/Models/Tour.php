@@ -11,6 +11,7 @@ class Tour extends Model
 
     public $fillable = [
         'order',
+        'out_lnk',
         'title',
         'title_input',
         'slug',

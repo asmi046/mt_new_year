@@ -7,6 +7,7 @@ namespace App\MoonShine\Resources;
 use App\Models\Tour;
 use MoonShine\Fields\ID;
 
+use MoonShine\Fields\Url;
 use MoonShine\Fields\Date;
 use MoonShine\Fields\Json;
 use MoonShine\Fields\Text;
@@ -64,6 +65,7 @@ class TourResource extends ModelResource
         return [
             ID::make()->sortable(),
             Number::make('Порядок', 'order'),
+            Url::make('Внешняя ссылка', 'out_lnk'),
             Text::make('Название', 'title')->required(),
             TinyMce::make('Название на баннере', 'title_input'),
             Text::make('URL', 'slug'),
@@ -106,6 +108,7 @@ class TourResource extends ModelResource
         return [
             ID::make()->sortable(),
             Number::make('Порядок', 'order'),
+            Url::make('Внешняя ссылка', 'out_lnk'),
             Text::make('Название', 'title'),
             TinyMce::make('Название на баннере', 'title_input'),
             Text::make('URL', 'slug'),

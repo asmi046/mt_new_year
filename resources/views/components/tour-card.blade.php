@@ -1,4 +1,4 @@
-<a href="{{ route('tour_page', $item['slug']) }}" class="tour_card">
+<a href="{{ ($item['out_lnk'])?$item['out_lnk']:route('tour_page', $item['slug']) }}" class="tour_card">
     <div class="img">
         <img src="{{ Storage::url($item['img']) }}" alt="{{ $item['title'] }}">
 
