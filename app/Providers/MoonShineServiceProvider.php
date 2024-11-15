@@ -45,6 +45,11 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
                 new TourResource()
             )->icon('heroicons.outline.globe-alt'),
 
+            MenuItem::make(
+                static fn() => __('Сброс кеша'),
+                fn() => route('cache_clear'),
+            )->icon('heroicons.arrow-path-rounded-square'),
+
             MenuGroup::make(static fn() => __('moonshine::ui.resource.system'), [
                 MenuItem::make(
                     static fn() => __('moonshine::ui.resource.admins_title'),

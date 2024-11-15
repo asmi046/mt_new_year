@@ -8,3 +8,8 @@ use App\Http\Controllers\TourController;
     Route::get('/', [IndexController::class, "index"])->name('home');
 
     Route::get('/tours/{slug}', [TourController::class, "index"])->name('tour_page');
+
+    Route::get('/cache_clear', function() {
+        Artisan::call('optimize:clear');
+        return Redirect::back()->with('msg', 'Кеш сброшен');
+    })->name('cache_clear');
