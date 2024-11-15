@@ -13,8 +13,11 @@
         <p class="label label_white">{{ $item['deycount'] }} {{ echo_days($item['deycount']) }}</p>
         @if ($item['multi_data'])
         <p class="label label_white">
-            @foreach ($item['multi_data'] as $item)
-                {{ date ("d.m.Y", strtotime($item['start_data'])) }},
+            @foreach ($item['multi_data'] as $subitem)
+                {{ date ("d.m.Y", strtotime($subitem['start_data'])) }}
+                @if ($loop->index != count($item['multi_data'])-1)
+                ,
+                @endif
             @endforeach
         </p>
         @else
