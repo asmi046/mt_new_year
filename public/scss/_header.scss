@@ -13,6 +13,10 @@ header {
         justify-content: space-between;
         border-bottom: 1px solid white;
     }
+
+    .hed_phone {
+        margin: auto 0 auto 0;
+    }
 }
 
 @media (max-width:768px) {
@@ -24,6 +28,10 @@ header {
             justify-content: start;
             border: none;
 
+        }
+
+        .hed_phone {
+            margin: auto 0 auto auto;
         }
     }
 }
