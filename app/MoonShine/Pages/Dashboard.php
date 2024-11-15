@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\MoonShine\Pages;
 
 use MoonShine\Pages\Page;
+use MoonShine\ActionButtons\ActionButton;
 use MoonShine\Components\MoonShineComponent;
 
 class Dashboard extends Page
@@ -21,7 +22,7 @@ class Dashboard extends Page
 
     public function title(): string
     {
-        return $this->title ?: 'Dashboard';
+        return $this->title ?: 'Новогодние туры Мир Туризма46';
     }
 
     /**
@@ -29,6 +30,11 @@ class Dashboard extends Page
      */
     public function components(): array
 	{
-		return [];
+		return [
+            ActionButton::make(
+                label: 'На сайт',
+                url: route('home'),
+            )
+        ];
 	}
 }

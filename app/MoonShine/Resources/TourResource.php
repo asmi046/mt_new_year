@@ -21,6 +21,7 @@ use MoonShine\Handlers\ExportHandler;
 use MoonShine\Handlers\ImportHandler;
 use MoonShine\Resources\ModelResource;
 use Illuminate\Database\Eloquent\Model;
+use MoonShine\ActionButtons\ActionButton;
 use MoonShine\Components\MoonShineComponent;
 
 /**
@@ -106,7 +107,14 @@ class TourResource extends ModelResource
                         Image::make('Изображение', 'img')->dir('tours'),
                         Text::make('Заголовок', 'title'),
                         Switcher::make('В шапке', 'in_top')
-                    ])
+                    ]),
+
+                    ActionButton::make(
+                        label: 'Перейти к странице',
+                        url: route('tour_page', $this->getItem()['slug']),
+                    )
+                    ->success()
+                    ->blank()
         ];
     }
 
