@@ -1,6 +1,6 @@
 <footer>
     <a class="logo" href="https://www.mirturizma46.ru/">
-        <img src="{{ asset('img/logo_white.svg')}}" alt="Тур в Санкт-Петербург - МирТуризма 46">
+        <img src="{{ asset('img/logo_white.svg')}}" alt="Новогодние туры из Курска - МирТуризма">
     </a>
 
     <nav>
