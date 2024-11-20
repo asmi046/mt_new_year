@@ -32,7 +32,7 @@ import { ref } from 'vue';
     const goToPay = () => {
         const payPage = "https://www.mirturizma46.ru/otpravka-dannyx-na-oplatu/"
         const tourType = "?type=ekskursionka"
-        const pid = "&pid=10784"
+        const pid = "&pid=33333"
         const price = "&price="
         const message = "&message="
         const picture = "&pic="
